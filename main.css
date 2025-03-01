@@ -9,6 +9,16 @@ body{
     transform: translate(-50%, -50%)
 }
 
-#budowa *{
+#budowa h4, h2{
     text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+#budowa a{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-decoration: none;
+    color: black;
 }
