@@ -82,6 +82,6 @@ main #portfolio-main .box .text {
 
 
 #budowa{
-    display: none;
+/*     display: none; */
     z-index: 2;
 }
