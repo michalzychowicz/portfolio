@@ -1,6 +1,7 @@
-*{
-    margin: auto;
-}
 body{
     background-color: lightgray;
+}
+
+#budowa{
+    margin: auto;
 }
