@@ -3,7 +3,9 @@
 }
 
 body{
-    background-color: lightgray;
+    background-size: auto;
+    background-color: #D9E1EC;
+    background-image: linear-gradient(#D9E1EC 0%, #C4D2E6 100%);
 }
 
 #budowa{
