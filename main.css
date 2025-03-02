@@ -24,7 +24,6 @@ header, #personal{
 }
 
 header{
-    display: none;
     margin-top: 20px;
     position: fixed;
     top: 0;
