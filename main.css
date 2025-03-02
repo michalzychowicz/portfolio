@@ -17,17 +17,18 @@ body{
 }
 
 header, #personal{
-    background-color: black;
+    /* background-color: black; */
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
 }
 
 header{
-    margin-top: 30px;
+    margin-top: 20px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px 10%;
+    padding: 10px 5%;
     /* filter: drop-shadow(10px); */
     display: flex;
     justify-content: space-between;
@@ -48,6 +49,7 @@ header .logo:hover{
 }
 
 header nav a{
+    display: none;
     font-size: large;
     margin-left: 15px;
     font-weight: bold;
@@ -60,45 +62,10 @@ header nav a:hover, header nav a.active{
     border-bottom: 4px solid blue;
 }
 
-@media(max-width: 700px){
-    header{
-        background-color: transparent;
-    }
-    header nav{
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 35%;
-        border-left: 4px solid blue;
-        border-bottom: 4px solid blue;
-        border-bottom-left-radius: 15px;
-        padding: 10px;
-        border-top: 4px solid transparent;
-        background-color: black;
-    }
-
-    header nav.active{
-        display: block;
-    }
-
-    header nav a{
-        display: block;
-        font-size: unset;
-        margin: 5px 0;
-    }
-
-    header nav a:hover, header nav a.active{
-        color: blue;
-        border-bottom: 2px solid blue;
-        padding-bottom: 5px;
-    }
-}
-
 section{
     min-height: 100vh;
     background-color: white;
-    padding: 20px 10%;
-    flex-wrap: wrap;
+    padding: 20px 5%;
 }
 
 section#personal{
@@ -111,15 +78,107 @@ section#personal{
 
 section#personal .description span{
     color: blue;
+    font-size: larger;
+}
+
+section#personal .description p{
+    font-size: 1em;
+    font-weight: bold;
+    text-align: justify;
+}
+
+section#personal .description h2 span::after{
+    content: "";
+    animation: cursor 1s infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 0.1em solid blue;
+    }
 }
 
 section#personal .image img{
     position: relative;
-    width: 200px;
-    box-shadow: 0 0 25px blue;
+    width: 250px;
+    border-radius: 25%;
+    /* box-shadow: 0 0 25px blue; */
     transition: 0.3s linear(0 1);
 }
 
-section#personal img{
-    border-radius: 20%;
+main{
+    padding: 5%;
+    /* background-image: linear-gradient(145deg, #93AFD7 0%, #C4D2E6 100%); */
+}
+
+footer{
+    padding: 2%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+@media(max-width: 600px){
+    body{
+        font-size: smaller;
+    }
+
+    section#personal .image{
+        margin-top: auto;
+        /* align-items: end; */
+    }
+
+    section#personal .image img{
+        width: 150px;
+    }
+
+    header nav a{
+        display: none;
+    }
+    section#personal{
+        padding-top: 40px;
+    }
+    section#personal{
+        display: column;
+        gap: 0;
+    }
+
+    /* header{
+        margin-top: 0;
+        width: 100%;
+        padding: 10px 5%;
+        display: block;
+        text-align: center;
+    } */
+
+    /* header nav a{
+        line-height: 30px;
+    }
+
+    section#personal{
+        padding-top: 120px;
+    } */
+}
+
+@media(orientation: landscape){
+    section#personal .description h1{
+        font-size: 4vw;
+    }
+    section#personal .description h2{
+        font-size: 3vw;
+        margin-bottom: 1vw;
+    }
+}
+
+@media(orientation: portrait){
+    section#personal{
+        flex-wrap: wrap;
+    }
+    section#personal .description h1{
+        font-size: 4vh;
+    }
+    section#personal .description h2{
+        font-size: 3vh;
+        margin-bottom: 2vh;
+    }
 }
