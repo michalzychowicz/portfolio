@@ -88,7 +88,7 @@ section#personal .description p{
     text-align: justify;
 }
 
-section#personal .description h2 span::after{
+section#personal .description h2 span#typing::after{
     content: "";
     animation: cursor 1s infinite;
 }

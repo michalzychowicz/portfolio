@@ -13,7 +13,7 @@ function typeWord() {
         // Inicjalizujemy tekst na pusty przed rozpoczęciem pisania
         if (letterIndex === 0) {
             typingElement.textContent = ""; // Zapewnia, że tekst na początku jest pusty
-            if (wordIndex == 1) {
+            if (wordIndex === 0) {
                 document.getElementById("przedrostek").innerHTML = "a";
             } else{
                 document.getElementById("przedrostek").innerHTML = "an";
