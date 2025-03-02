@@ -10,6 +10,7 @@
 }
 
 body{
+    background-color: black;
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
@@ -23,6 +24,7 @@ header, #personal{
 }
 
 header{
+    display: none;
     margin-top: 20px;
     position: fixed;
     top: 0;
