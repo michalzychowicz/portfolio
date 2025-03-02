@@ -76,7 +76,8 @@ section#personal{
     background-color: black;
 }
 
-section#personal .description span{
+section#personal .description h1 span, 
+section#personal .description h2 span#typing{
     color: blue;
     font-size: larger;
 }
