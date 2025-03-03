@@ -157,14 +157,28 @@ main #kafelki{
     gap: 3%;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* align-items: center; */
+    align-items: center;
 }
+@media(max-width: 700px){
+    main #kafelki{
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
 
 main #kafelki a{
     height: 30vh;
     width: 30%;
-    min-height: 200px;
+    min-height: 150px;
     min-width: 200px;
+}
+@media(max-width: 700px){
+    main #kafelki a{
+        min-width: unset;
+        width: 100%;
+        /* height: fit-content; */
+    }
 }
 
 main #kafelki a .kafelek{
