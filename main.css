@@ -123,6 +123,11 @@ section#personal .description #links a{
     display: inline-block;
 }
 
+section#personal .description #links a:hover{
+    transform: scale(1.1);
+    transform: translateY(-0.5vh);
+}
+
 section#personal .description #links a img{
     height: auto;
     display: block;
