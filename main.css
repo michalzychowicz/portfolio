@@ -111,6 +111,11 @@ section#personal .image img{
 section#personal .description #links a{
     padding: 10px;
     border: 5px solid white;
+    margin: auto;
+}
+
+section#personal .description #links a img{
+    height: auto;
 }
 
 main{
@@ -176,9 +181,6 @@ footer{
         font-size: 3vw;
         margin-bottom: 1vw;
     }
-    section#personal .description #links a img{
-        height: 4vw;
-    }
 }
 
 @media(orientation: portrait){
@@ -191,8 +193,5 @@ footer{
     section#personal .description h2{
         font-size: 3vh;
         margin-bottom: 2vh;
-    }
-    section#personal .description #links a img{
-        height: 4vh;
     }
 }
