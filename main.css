@@ -113,11 +113,13 @@ section#personal .description #links{
     justify-content: center;
     align-items: center;
     height: 100%;
+    margin-top: 1%;
 }
 
 section#personal .description #links a{
     padding: 10px;
     border: 5px solid white;
+    border-radius: 10px;
     display: inline-block;
 }
 
@@ -190,6 +192,9 @@ footer{
         font-size: 3vw;
         margin-bottom: 1vw;
     }
+    section#personal .description #links a img{
+        height: 4vw;
+    }
 }
 
 @media(orientation: portrait){
@@ -202,5 +207,8 @@ footer{
     section#personal .description h2{
         font-size: 3vh;
         margin-bottom: 2vh;
+    }
+    section#personal .description #links a img{
+        height: 4vh;
     }
 }
