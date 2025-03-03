@@ -123,10 +123,12 @@ section#personal .description #links a{
     display: inline-block;
 }
 
-section#personal .description #links a:hover{
-    transform: scale(1.1);
-    border: 5px solid blue;
-    box-shadow: 0 0 10px 5px rgba(0, 0, 255, 0.5);
+@media(hover: hover) and (pointer: fine) {
+    section#personal .description #links a:hover{
+        transform: scale(1.1);
+        border: 5px solid blue;
+        box-shadow: 0 0 10px 5px rgba(0, 0, 255, 0.5);
+    }
 }
 
 section#personal .description #links a img{
