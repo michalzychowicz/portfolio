@@ -125,13 +125,17 @@ section#personal .description #links a{
 
 section#personal .description #links a:hover{
     transform: scale(1.1);
-    transform: translateY(-0.5vh);
+    transform: translateY(0.5vh);
+    border: 5px solid blue;
 }
 
 section#personal .description #links a img{
     height: auto;
     display: block;
     margin: auto;
+}
+section#personal .description #links a img:hover{
+    transform: scale(1.1);
 }
 
 main{
