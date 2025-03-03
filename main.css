@@ -121,11 +121,11 @@ section#personal .description #links a{
     border: 5px solid white;
     border-radius: 10px;
     display: inline-block;
+    transition: 1s;
 }
 
 section#personal .description #links a:hover,
 section#personal .description #links a:active{
-    transform: scale(1.1);
     border: 5px solid blue;
     box-shadow: 0 0 10px 5px rgba(0, 0, 255, 0.5);
 }
@@ -137,8 +137,78 @@ section#personal .description #links a img{
 }
 
 main{
-    padding: 5%;
+    width: 100%;
+    padding: 2% 5%;
     /* background-image: linear-gradient(145deg, #93AFD7 0%, #C4D2E6 100%); */
+    background-image: radial-gradient(darkblue 0%, black 80%);
+    color: white;
+    /* -webkit-text-stroke: 1px black; */
+    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main #kafelki{
+    width: 90%;
+    background-color: transparent;
+    display: flex;
+    /* flex-direction: row; */
+    gap: 3%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* align-items: center; */
+}
+
+main #kafelki a{
+    height: 30vh;
+    width: 30%;
+    min-height: 200px;
+    min-width: 200px;
+}
+
+main #kafelki a .kafelek{
+    margin: 20px auto;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    display: flexbox;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    word-wrap: break-word;
+}
+main #kafelki a .kafelek:hover{
+    box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.5);
+    border: 3px solid white;
+    background-color: rgba(211, 211, 211, 0.5);
+    color: darkblue;
+}
+
+main #kafelki a .kafelek .ikonka{
+    width: 100%;
+    min-height: 80%;
+    text-align: center;
+}
+main #kafelki a .kafelek .ikonka img{
+    /* background-color: rgb(255, 255, 255); */
+    margin: auto;
+    max-width: 100%;
+    min-height: 80px;
+    height: 15vh;
+}
+main #kafelki a .kafelek .nazwa{
+    min-height: 20%;
+    margin: auto;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
 }
 
 footer{
