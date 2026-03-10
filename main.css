@@ -14,6 +14,7 @@ body{
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
+    scroll-behavior: smooth;
     /* background-image: linear-gradient(145deg, #93AFD7 0%, #C4D2E6 100%); */
 }
 
@@ -70,11 +71,47 @@ section{
 }
 
 section#personal{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
     background-color: black;
+}
+
+.scroll-indicator{
+    position: absolute;
+    left: 50%;
+    bottom: 22px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease;
+}
+
+.scroll-indicator .scroll-arrow{
+    font-size: 1.2rem;
+    animation: bounce-down 1.5s ease-in-out infinite;
+}
+
+.scroll-indicator:hover{
+    color: white;
+}
+
+@keyframes bounce-down{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(7px);
+    }
 }
 
 section#personal .description h1 span, 
@@ -139,8 +176,10 @@ section#personal .description #links a img{
 main{
     width: 100%;
     padding: 2% 5%;
-    /* background-image: linear-gradient(145deg, #93AFD7 0%, #C4D2E6 100%); */
-    background-image: radial-gradient(darkblue 0%, black 80%);
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(41, 98, 255, 0.35), transparent 35%),
+        radial-gradient(circle at 90% 0%, rgba(0, 188, 212, 0.3), transparent 30%),
+        linear-gradient(150deg, #0c1028 0%, #132c4a 48%, #1f4d6b 100%);
     color: white;
     /* -webkit-text-stroke: 1px black; */
     display: flex;
@@ -256,6 +295,11 @@ footer{
     section#personal{
         display: column;
         gap: 0;
+    }
+
+    .scroll-indicator{
+        bottom: 12px;
+        font-size: 0.72rem;
     }
 
     /* header{
