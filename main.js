@@ -48,3 +48,13 @@ function typeWord() {
 }
 
 typeWord(); // Rozpoczynamy animację
+
+const scrollIndicator = document.querySelector(".scroll-indicator");
+const projectsSection = document.getElementById("projects");
+
+if (scrollIndicator && projectsSection) {
+    scrollIndicator.addEventListener("click", (event) => {
+        event.preventDefault();
+        projectsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+}
