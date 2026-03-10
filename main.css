@@ -312,9 +312,15 @@ footer{
         font-size: smaller;
     }
 
+    section#personal{
+        padding-top: 8px;
+        padding-bottom: 92px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
     section#personal .image{
-        margin-top: auto;
-        /* align-items: end; */
+        margin-top: 0;
     }
 
     section#personal .image img{
@@ -324,16 +330,8 @@ footer{
     header nav a{
         display: none;
     }
-    section#personal{
-        /* padding-top: 40px; */
-    }
-    section#personal{
-        display: column;
-        gap: 0;
-    }
-
     .scroll-indicator{
-        bottom: 12px;
+        bottom: 20px;
         font-size: 0.72rem;
     }
 
