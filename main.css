@@ -76,13 +76,9 @@ header nav a:hover, header nav a.active{
     border-bottom: 4px solid blue;
 }
 
-section{
-    min-height: 100vh;
-    background-color: white;
-    padding: 20px 5%;
-}
-
 section#personal{
+    min-height: 100vh;
+    padding: 20px 5%;
     position: relative;
     display: flex;
     justify-content: center;
