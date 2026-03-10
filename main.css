@@ -95,22 +95,52 @@ section#personal{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2px;
+    gap: 4px;
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--text-muted);
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, opacity 0.3s ease;
+    animation: indicator-fade-in 0.8s ease 0.25s both;
 }
 
 .scroll-indicator .scroll-arrow{
     font-size: 1.2rem;
-    animation: bounce-down 1.5s ease-in-out infinite;
+    animation: bounce-down 1.3s ease-in-out infinite;
+}
+
+.scroll-indicator .scroll-mouse{
+    width: 18px;
+    height: 30px;
+    border: 2px solid currentColor;
+    border-radius: 999px;
+    display: flex;
+    justify-content: center;
+    padding-top: 4px;
+}
+
+.scroll-indicator .scroll-dot{
+    width: 3px;
+    height: 6px;
+    border-radius: 999px;
+    background-color: currentColor;
+    animation: scroll-dot 1.3s ease-in-out infinite;
 }
 
 .scroll-indicator:hover{
     color: var(--primary);
+}
+
+@keyframes indicator-fade-in{
+    from{
+        opacity: 0;
+        transform: translate(-50%, 8px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
 }
 
 @keyframes bounce-down{
@@ -119,6 +149,20 @@ section#personal{
     }
     50%{
         transform: translateY(7px);
+    }
+}
+
+@keyframes scroll-dot{
+    0%{
+        opacity: 0;
+        transform: translateY(0);
+    }
+    25%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(11px);
     }
 }
 
