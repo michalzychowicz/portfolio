@@ -1,4 +1,4 @@
-const words = ["Student.", "IT Technician.", "Effective Organizer.", "Coffee Enthusiast."];
+const words = ["IT Engineer.", "IT Technician.", "Effective Organizer.", "Coffee Enthusiast."];
 const typingElement = document.getElementById('typing');
 let wordIndex = 0;
 let letterIndex = 0;
