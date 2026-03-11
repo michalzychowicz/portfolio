@@ -14,6 +14,7 @@ const translations = {
         project5: "Projekt UX/UI <br>Easy Nanny",
         project6: "Biznesplan kawiarni (PL)",
         footerText: "Stworzone przez: Michał Zychowicz",
+        backToTopAria: "Wróć na górę",
         typingWords: ["inżynierem informatyki.", "technikiem informatykiem.", "entuzjastą Agile/Scrum.", "miłośnikiem kawy."],
     },
     en: {
@@ -31,6 +32,7 @@ const translations = {
         project5: "UX/UI Project <br>Easy Nanny",
         project6: "Coffee Shop Business Plan (PL)",
         footerText: "Created by: Michał Zychowicz",
+        backToTopAria: "Back to top",
         typingWords: ["IT Engineer.", "IT Technician.", "Agile/Scrum Enthusiast.", "Coffee Enthusiast."],
     },
 };
@@ -38,6 +40,7 @@ const translations = {
 const typingElement = document.getElementById("typing");
 const prefixElement = document.getElementById("przedrostek");
 const langToggle = document.getElementById("lang-toggle");
+const backToTopButton = document.getElementById("back-to-top");
 
 let currentLang = localStorage.getItem("lang") === "en" ? "en" : "pl";
 let words = translations[currentLang].typingWords;
@@ -173,3 +176,20 @@ if (scrollIndicator && projectsSection) {
         projectsSection.scrollIntoView({ behavior: "smooth", block: "start" });
     });
 }
+
+function updateBackToTopVisibility() {
+    if (!backToTopButton) {
+        return;
+    }
+
+    backToTopButton.classList.toggle("is-visible", window.scrollY > 240);
+}
+
+if (backToTopButton) {
+    backToTopButton.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+}
+
+window.addEventListener("scroll", updateBackToTopVisibility, { passive: true });
+updateBackToTopVisibility();
