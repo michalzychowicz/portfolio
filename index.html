@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Portfolio MZ</title>
+    <title data-i18n="metaTitle">Portfolio MZ</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Przełącz język">🇬🇧</button>
 
     <!-- <header>
         <a href="#" class="logo"></a>
@@ -23,50 +25,47 @@
     </header> -->
     <section id="personal">
         <div class="image">
-            <img src="./media/FOTO Styl -236x295 px-kopia.jpeg">
+            <img src="./media/FOTO Styl -236x295 px-kopia.jpeg" alt="Michał Zychowicz">
         </div>
         <div class="description">
-            <h1>Hello, My name is <span>Michał</span></h1>
-            <h2>I'm <span id="przedrostek"></span> <span id="typing"></span></h2>
-            <p>I am an Applied Computer Science graduate from AGH, with experience in IT and gastronomy, seeking opportunities to grow in the IT industry and in educational roles (teacher/instructor), where I can apply my knowledge, communication skills, and eagerness to learn.</p>
+            <h1 data-i18n="introHeadline">Cześć, mam na imię <span>Michał</span></h1>
+            <h2><span data-i18n="introRolePrefix">Jestem</span> <span id="przedrostek"></span><span id="typing"></span></h2>
+            <p data-i18n="introDescription">Jestem absolwentem Informatyki Stosowanej na AGH, z&nbsp;doświadczeniem w&nbsp;IT i&nbsp;gastronomii. Szukam możliwości rozwoju w&nbsp;branży IT oraz w&nbsp;sektorze edukacyjnym, gdzie mogę wykorzystać wiedzę, umiejętności komunikacyjne i&nbsp;chęć ciągłej nauki.</p>
             <div id="links">
                 <a href="http://linkedin.com/in/michalzychowicz" target="_blank"><img src="./media/LinkedIn-Blue-40-╬ô├Ą├│@2x.png" alt="LinkedIn"></a>
             </div>
         </div>
-        <a href="#projects" class="scroll-indicator" aria-label="Przewiń do sekcji projektów">
-            <span>Scroll down</span>
+        <a href="#projects" class="scroll-indicator" data-i18n-attr="aria-label:scrollAria">
+            <span data-i18n="scrollDown">Przewiń w dół</span>
             <span class="scroll-mouse"><span class="scroll-dot"></span></span>
             <span class="scroll-arrow">↓</span>
         </a>
     </section>
     <main id="projects">
-        <h1>PROJECTS</h1>
+        <h1 data-i18n="projectsTitle">PROJEKTY</h1>
         <section id="kafelki">
             <a href="./projekty/inzynierska/Zychowicz_Praca_Inzynierska.pdf" target="_blank"><div class="kafelek">
-                <div class="nazwa">Praca inżynierska (PL)</div>
+                <div class="nazwa" data-i18n="project1">Praca inżynierska (PL)</div>
             </div></a>
             <a href="./projekty/agile/Wprowadzenie do Atlassian.pdf" target="_blank"><div class="kafelek">
-                <!-- <div class="ikonka"><img src="./media/kawasy.png" alt=""></div> -->
-                <div class="nazwa">Wprowadzenie do Atlassian (PL)</div>
+                <div class="nazwa" data-i18n="project2">Wprowadzenie do Atlassian (PL)</div>
             </div></a>
             <a href="./projekty/agile/Agile.pdf" target="_blank"><div class="kafelek">
-                <!-- <div class="ikonka"><img src="./media/kawasy.png" alt=""></div> -->
-                <div class="nazwa">Automatyzacja Atlassian dla skalowalnych projektów (PL)</div>
+                <div class="nazwa" data-i18n="project3">Automatyzacja Atlassian dla skalowalnych projektów (PL)</div>
             </div></a>
             <a href="./projekty/gis/GIS_Project.pdf" target="_blank"><div class="kafelek">
-                <div class="nazwa">Analyzing the Impact of Education Levels in Poland on Various Socioeconomic Sectors</div>
+                <div class="nazwa" data-i18n="project4">Analiza wpływu poziomu edukacji w Polsce na różne sektory społeczno-ekonomiczne</div>
             </div></a>
             <a href="https://www.figma.com/proto/TYzQDTSH4AwHpd8dRinFCe/EN_almost_done?node-id=0-1&p=f&t=I9tdREaXQvVi3Qaq-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A873" target="_blank"><div class="kafelek">
-                <div class="nazwa">UX/UI Project <br>Easy Nanny</div>
+                <div class="nazwa" data-i18n="project5">Projekt UX/UI <br>Easy Nanny</div>
             </div></a>
             <a href="./projekty/biznesplan/BP_kawasy.pdf" target="_blank"><div class="kafelek">
-                <!-- <div class="ikonka"><img src="./media/kawasy.png" alt=""></div> -->
-                <div class="nazwa">Coffeeshop Biznesplan (PL)</div>
+                <div class="nazwa" data-i18n="project6">Biznesplan kawiarni (PL)</div>
             </div></a>
         </section>
     </main>
-    <footer>
-        Created by: Michał Zychowicz
+    <footer data-i18n="footerText">
+        Stworzone przez: Michał Zychowicz
     </footer>
 
 
